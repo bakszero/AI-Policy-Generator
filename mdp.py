@@ -99,7 +99,7 @@ class ValueIterator:
 
             if (max(list) < self.delta):
                 #print list
-                print "hola"
+                return
 
 
             #Update previous world to the new world
