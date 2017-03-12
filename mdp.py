@@ -83,8 +83,20 @@ class ValueIterator:
                         continue
 
                     list.append((self.world[row][col] - self.prev_world[row][col])) 
-            #print list
+            
+            print "List for utility change: "
+            print list
                     
+            
+            print "Change of utility's max = " + str(max(list))
+            
+            i = max(list)
+            print i
+            for j in range(len(list)):
+                if (i == list[j]):
+                    print "coords of max utility change is "
+                    print j
+
             if (max(list) < self.delta):
                 #print list
                 print "hola"
