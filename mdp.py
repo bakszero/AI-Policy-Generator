@@ -1,41 +1,18 @@
 #!/bin/env python
 """
-9.15 Value Iteration 3
-==============================
 
-We got the following world::
+COMMENTS: The original algorithm written was wrong, and had to be corrected. Attaching the name of the author here, who first wrote this.
+Also, extra features added are breaking at delta and policy iteration after the termination of the algorithm.
 
-    +--+-----+-----+-----+-----+
-    |  |  1  |  2  |  3  |  4  |
-    +--+-----+-----+-----+-----+
-    |A |     |     |     | +100|
-    +--+-----+-----+-----+-----+
-    |B |     |#####|     | -100|
-    +--+-----+-----+-----+-----+
-    |C |     |     |     |     |
-    +--+-----+-----+-----+-----+
+CORRECTION TO ORIGINAL VERSION:
+The original version updated the bellman states by considering the immediate updated values of the world. That is not the case with the
+value iteration algorithm. It has to consider the previous world state, in order to compute the latest one. The mistake gave wrong values
+and has since been corrected in this version.
 
-The goal is in A4 with a reward of +100. B4 is a trap. B2 is blocked.
-
-When heading into the target direction the target field is successfully
-reached with a probability of 0.8. Adjacent fields (90 deg angle) with 0.1.
-
-We should calculate the optimal policy.
-
-Result::
-
-    +--+---------------+----------------+----------------+---------------+
-    |0 |          85.0 |           89.0 |           93.0 |            100|
-    +--+---------------+----------------+----------------+---------------+
-    |1 |          81.0 |           None |           68.0 |           -100|
-    +--+---------------+----------------+----------------+---------------+
-    |2 |          77.0 |           73.0 |           70.0 |           47.0|
-    +--+---------------+----------------+----------------+---------------+
 
 """
 __author__ = 'Jan Beilicke <dev +at+ jotbe-fx +dot+ de>'
 __date__ = '2011-11-11'
-
 __coauthor__ = 'Bakhtiyar Syed'
 __date__ = '2017-03-11'
 import sys, math
