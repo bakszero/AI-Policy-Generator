@@ -1,8 +1,10 @@
 #!/bin/env python
 """
 
-COMMENTS: The original algorithm written was wrong, and had to be corrected. Attaching the name of the author here, who first wrote this.
-Also, extra features added are breaking at delta and policy iteration after the termination of the algorithm.
+COMMENTS: The original algorithm written was wrong, and had to be corrected(mentioned below). Attaching the name of the author here,
+who first wrote this, for attribution.
+Also, extra features added are breaking the loop after maximum change in utlities go below a pre-defined threshold
+and addition of policy iteration after the termination of the algorithm.
 
 CORRECTION TO ORIGINAL VERSION:
 The original version updated the bellman states by considering the immediate updated values of the world. That is not the case with the
