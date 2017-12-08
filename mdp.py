@@ -7,9 +7,9 @@ Also, extra features added are breaking the loop after maximum change in utlitie
 and addition of policy iteration after the termination of the algorithm.
 
 CORRECTION TO ORIGINAL VERSION:
-The original version updated the bellman states by considering the immediate updated values of the world. That is not the case with the
-value iteration algorithm. It has to consider the previous world state, in order to compute the latest one. The mistake gave wrong values
-and has since been corrected in this version.
+The original version updated the bellman states by considering the immediate updated values of the world. That is not the case
+with the value iteration algorithm. It has to consider the previous world state, in order to compute the latest one.
+The mistake gave wrong values and has since been corrected in this version.
 
 
 """
